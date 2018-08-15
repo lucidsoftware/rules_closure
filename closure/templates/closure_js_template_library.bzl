@@ -62,7 +62,7 @@ _closure_js_template_library = rule(
             aspects=[closure_js_aspect],
             providers=["closure_js_library"]),
         "outputs": attr.output_list(),
-        "globals": attr.label(allow_files=True, single_file=True),
+        "globals": attr.label(allow_single_file=True),
         "plugin_modules": attr.label_list(),
         "should_provide_require_soy_namespaces": attr.bool(default=True),
         "should_generate_soy_msg_defs": attr.bool(),

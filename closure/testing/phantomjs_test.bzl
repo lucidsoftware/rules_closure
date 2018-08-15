@@ -64,8 +64,7 @@ _phantomjs_test = rule(
             providers=["closure_js_binary"],
             default=Label("//closure/testing:phantomjs_harness_bin")),
         "html": attr.label(
-            single_file=True,
-            allow_files=HTML_FILE_TYPE,
+            allow_single_file=HTML_FILE_TYPE,
             default=Label("//closure/testing:empty.html")),
         "data": attr.label_list(allow_files=True),
         "_phantomjs": attr.label(
