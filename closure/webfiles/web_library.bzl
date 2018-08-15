@@ -188,7 +188,7 @@ web_library = rule(
         "srcs": attr.label_list(allow_files=True),
         "deps": attr.label_list(providers=["webfiles"]),
         "exports": attr.label_list(),
-        "data": attr.label_list(cfg="data", allow_files=True),
+        "data": attr.label_list(allow_files=True),
         "suppress": attr.string_list(),
         "strip_prefix": attr.string(),
         "external_assets": attr.string_dict(default={"/_/runfiles": "."}),

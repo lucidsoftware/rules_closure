@@ -87,7 +87,7 @@ closure_css_binary = rule(
         "orientation": attr.string(default="NOCHANGE"),
         "renaming": attr.bool(default=True),
         "vendor": attr.string(),
-        "data": attr.label_list(cfg="data", allow_files=True),
+        "data": attr.label_list(allow_files=True),
         "_compiler": attr.label(
             default=Label(
                 "@com_google_closure_stylesheets//:ClosureCommandLineCompiler"),

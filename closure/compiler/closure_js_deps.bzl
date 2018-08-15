@@ -79,7 +79,7 @@ closure_js_deps = rule(
     implementation=_impl,
     attrs={
         "deps": attr.label_list(),
-        "data": attr.label_list(cfg="data", allow_files=True),
+        "data": attr.label_list(allow_files=True),
         "_closure_library_base": CLOSURE_LIBRARY_BASE_ATTR,
         "_depswriter": attr.label(
             default=Label("@com_google_javascript_closure_library//:depswriter"),

@@ -67,7 +67,7 @@ _phantomjs_test = rule(
             single_file=True,
             allow_files=HTML_FILE_TYPE,
             default=Label("//closure/testing:empty.html")),
-        "data": attr.label_list(cfg="data", allow_files=True),
+        "data": attr.label_list(allow_files=True),
         "_phantomjs": attr.label(
             default=Label("//third_party/phantomjs"),
             executable=True,

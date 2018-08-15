@@ -261,7 +261,7 @@ closure_js_binary = rule(
         "output_wrapper": attr.string(),
         "property_renaming_report": attr.output(),
         "warning_level": attr.string(default="VERBOSE"),
-        "data": attr.label_list(cfg="data", allow_files=True),
+        "data": attr.label_list(allow_files=True),
         "conformance": attr.label_list(allow_files=True),
         "suppress_on_all_sources_in_transitive_closure": attr.string_list(),
 
