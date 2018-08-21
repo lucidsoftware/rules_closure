@@ -43,7 +43,7 @@ def _impl(ctx):
     for f in dep.closure_js_library.descriptors:
       args += ["--protoFileDescriptors=%s" % f.path]
       inputs.append(f)
-  ctx.action(
+  ctx.actions.run(
       inputs=inputs,
       outputs=ctx.outputs.outputs,
       executable=ctx.executable.compiler,

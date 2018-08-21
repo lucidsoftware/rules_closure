@@ -54,7 +54,7 @@ def _closure_css_binary(ctx):
   for f in css.srcs:
     args.append(f.path)
     inputs.append(f)
-  ctx.action(
+  ctx.actions.run(
       inputs=inputs,
       outputs=outputs,
       arguments=args,

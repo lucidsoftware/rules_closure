@@ -203,7 +203,7 @@ def _impl(ctx):
   # all JavaScript sources in the transitive closure, sans dead code.
   argfile = create_argfile(ctx.actions, ctx.label.name, args)
   inputs.append(argfile)
-  ctx.action(
+  ctx.actions.run(
       inputs=inputs,
       outputs=outputs,
       executable=ctx.executable._ClosureWorker,

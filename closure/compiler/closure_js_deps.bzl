@@ -28,7 +28,7 @@ def _impl(ctx):
   closure_rel = '/'.join(['..' for _ in range(len(closure_root.split('/')))])
   outputs = [ctx.outputs.out]
   # XXX: Other files in same directory will get schlepped in w/o sandboxing.
-  ctx.action(
+  ctx.actions.run(
       inputs=list(js.srcs),
       outputs=outputs,
       arguments=(["--output_file=%s" % ctx.outputs.out.path] +

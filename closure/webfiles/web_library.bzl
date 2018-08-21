@@ -103,7 +103,7 @@ def _web_library(ctx):
     args.append(man.path)
   argfile = create_argfile(ctx.actions, ctx.label.name, args)
   inputs.append(argfile)
-  ctx.action(
+  ctx.actions.run(
       inputs=inputs,
       outputs=[ctx.outputs.dummy],
       executable=ctx.executable._ClosureWorker,
